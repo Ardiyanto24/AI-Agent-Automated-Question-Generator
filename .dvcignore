@@ -1,0 +1,27 @@
+# ══════════════════════════════════════════════════════════════
+# EXAMIND — .dvcignore
+# File ini memberitahu DVC folder/file mana yang TIDAK perlu di-track.
+# Mirip seperti .gitignore tapi khusus untuk DVC.
+# ══════════════════════════════════════════════════════════════
+
+# Python cache — tidak perlu di-track DVC
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model cache — biarkan download ulang, ukurannya besar
+.cache/
+models/

@@ -1,0 +1,48 @@
+# ══════════════════════════════════════════════════════════════
+# EXAMIND — .gitignore
+# Git hanya track CODE. Data besar dihandle DVC.
+# ══════════════════════════════════════════════════════════════
+
+# ── Environment & Secrets ─────────────────────────────────────
+.env
+*.env.local
+
+# ── Data besar — dihandle DVC, bukan Git ──────────────────────
+# DVC akan buat file .dvc sebagai "pointer" — file .dvc ITULAH yang di-commit ke Git
+# Folder aslinya TIDAK di-commit langsung
+/db/chroma/
+/db/sqlite/
+/knowledge_base/
+/assets/
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual Environment ───────────────────────────────────────
+venv/
+.venv/
+env/
+
+# ── IDE ───────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Streamlit ─────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Model cache sentence-transformers (besar, download ulang saja) ──
+.cache/
+models/
